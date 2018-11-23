@@ -1,5 +1,4 @@
 package testlogging;
-
 import java.util.concurrent.RejectedExecutionException;
 import com.google.api.gax.paging.Page;
 import com.google.cloud.logging.LogEntry;
@@ -23,9 +22,8 @@ public class ListLog {
 
 			do {
 				for (LogEntry logEntry : entries.iterateAll()) {
-
-					// 'If' condition works when there is more than one page and hasNextPage return
-					// true.
+					/*'If' condition works when there is more than one page and hasNextPage return
+					 true. */
 					if (entries.hasNextPage()) {
 						entries = entries.getNextPage();
 					}
